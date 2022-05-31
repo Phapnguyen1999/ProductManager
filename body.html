@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="product.css">
+    <link rel="shortcut icon" href="https://i.redd.it/y2gfp5h8zvz61.png">
+    <title>Product Maneger</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-side">
+            <div class="image" onclick="changeImg()" style='background-image: url("img/aodaido.jpeg")' ;></div>
+        </div>
+        <div class="right-side">
+            <div class="row">
+                <div class="add-area">
+                    <div style="display: none; " class="form-group">
+                        <input type="number" class="form-control" name="index" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="img">Image</label>
+                        <input type="url" class="form-control" id="img">
+                    </div>
+                    <div class="form-group">
+                        <label for="size">Size</label>
+                        <input type="text" class="form-control" id="size">
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price</label>
+                        <input type="number" class="form-control" id="price">
+                    </div>
+                    <div class="form-group">
+                        <button id="add" class="btn btn-warning" onclick="addProduct()">Create</button>
+                        <button id="submit" style="display:none;" class="btn btn-warning"
+                            onclick="submitProduct()">Submit</button>
+                        <button id="cancel" style="display:none;" class="btn btn-warning"
+                            onclick="cancel()">Cancel</button>
+                        <input type="hidden" id="productId" value="0">
+                        <input oninput="search(this)" type="text" placeholder="Search" class="search" id="search">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <table class="table1">
+                    <thead class="theader">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Image</th>
+                            <th>Size</th>
+                            <th>Price</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <hr>
+                    <tbody class="body">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="product.js">
+
+</script>
+
+</html>
